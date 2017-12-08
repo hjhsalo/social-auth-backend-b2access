@@ -2,7 +2,7 @@ social-auth-backend-b2access
 ============================
 
 B2ACCESS_ is an easy-to-use and secure Authentication and
-Authorization platform developed by EUDAT. B2ACESS offers
+Authorization platform developed by EUDAT. B2ACCESS offers
 authentication of users to applications using OAuth 2.0, OpenID
 Connect and SAML.
 
@@ -97,7 +97,7 @@ b2access.B2ACCESSOAuth2
 This is for services in production.
 
 Register service at
-    `B2ACEESS`_
+    `B2ACCESS`_
 
 Backend name
     ``b2access.B2ACCESSOAuth2``
