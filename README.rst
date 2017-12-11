@@ -88,6 +88,40 @@ In your site's ``urls.py``, include:
 string, ``''``, is fine.
 
 
+Generating usernames
+--------------------
+
+By default, the username that is returned is B2ACCESS'
+"name"-field, which holds a full name of a person. Also, the name
+is cleaned via a regular expression, see the table of results below:
+
++------------+---------+
+| Before     | After   |
++------------+---------+
+| John Doe   | JohnDoe |
+| Schültz    | Schltz  |
++------------+---------+
+
+If you don't want the username to be cleaned, set
+``SOCIAL_AUTH_CLEAN_USERNAMES`` to ``False`` in settings.
+
+If you want to make the username very url-friendly, set
+``SOCIAL_AUTH_SLUGIFY_USERNAMES`` to ``True``. "John Doe" will
+then be converted to "john-doe". This will also strip away
+non-ASCII letters.
+
+If you want to use email-addresses for the username, set
+``SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL`` to ``True`` in settings.
+
+If there already is a user with that username registered, the
+username will have a random alpahnumeric string appended in order
+to make it unique.
+
+You might want to let users change this generated username. The
+backend only cares that a username exists and is unique and won't
+change the username back.
+
+
 Backends
 --------
 
@@ -109,13 +143,6 @@ Settings
 
 Scopes needed
     ``userid`` and ``profile``, this is the default.
-
-Username generated:
-    Identical to email address. If the username is taken,
-    a lowercase alphanumeric string is appended. You might want to
-    let users change this generated username. The backend only
-    cares that a username exists and won't change the username
-    back.
 
 Redirect-uri ends with
     /complete/b2access/
@@ -141,13 +168,6 @@ Settings
 
 Scopes needed
     ``userid`` and ``profile``, this is the default.
-
-Username generated:
-    Identical to email address. If the username is taken,
-    a lowercase alphanumeric string is appended. You might want to
-    let users change this generated username. The backend only
-    cares that a username exists and won't change the username
-    back.
 
 Redirect-uri ends with
     /complete/b2access-test/

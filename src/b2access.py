@@ -17,10 +17,15 @@ class B2AccessOAuth2(BaseOAuth2):
 
     def get_user_details(self, response):
         """Return user details from B2ACCESS"""
+        fullname = response.get('name', '')
+        email = response.get('email', '')
+        uid = response.get('sub', None)
+        email_verified = bool(response.get('email_verified', None))
         return {
-            'username': response['email'],
-            'email': response['email'],
-            'fullname': response['name'],
+            'username': fullname or email or uid,
+            'email': email,
+            'fullname': fullname,
+            'email_verified': email_verified,
         }
 
     def get_user_id(self, details, response):
