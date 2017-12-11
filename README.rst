@@ -23,7 +23,7 @@ downloading the source and running ``setup.py``.
 Usage
 -----
 
-Set up an service at B2ACCESS
+Set up a service at B2ACCESS
 .............................
 
 There needs to exist an entry for your site/app/service at
