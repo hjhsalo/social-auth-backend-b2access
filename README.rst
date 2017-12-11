@@ -143,7 +143,7 @@ Settings
     Client secret: ``SOCIAL_AUTH_B2ACCESS_SECRET``
 
 Scopes needed
-    ``userid`` and ``profile``, this is the default.
+    ``email`` and ``profile``
 
 Redirect-uri ends with
     /complete/b2access/
@@ -168,7 +168,7 @@ Settings
     Client secret: ``SOCIAL_AUTH_B2ACCESS_TEST_SECRET``
 
 Scopes needed
-    ``userid`` and ``profile``, this is the default.
+    ``email`` and ``profile``
 
 Redirect-uri ends with
     /complete/b2access-test/
