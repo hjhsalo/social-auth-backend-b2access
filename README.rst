@@ -99,6 +99,7 @@ is cleaned via a regular expression, see the table of results below:
 | Before     | After   |
 +------------+---------+
 | John Doe   | JohnDoe |
++------------+---------+
 | Schültz    | Schltz  |
 +------------+---------+
 
