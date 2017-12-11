@@ -6,7 +6,7 @@ with open('README.rst') as F:
 
 setup(
     name='social-auth-backend-b2access',
-    version='1.0.0',
+    version='0.1.0',
     packages=['b2access'],
     include_package_data=True,
     package_dir = {'': 'src',},
